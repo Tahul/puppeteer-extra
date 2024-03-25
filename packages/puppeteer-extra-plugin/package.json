@@ -1,5 +1,5 @@
 {
-  "name": "puppeteer-extra-plugin",
+  "name": "@tahul/puppeteer-extra-plugin",
   "version": "3.2.3",
   "description": "Base class for puppeteer-extra plugins.",
   "main": "dist/index.cjs.js",
@@ -64,7 +64,7 @@
   "dependencies": {
     "@types/debug": "^4.1.0",
     "debug": "^4.1.1",
-    "defu": "^6.1.4"
+    "deepmerge": "^4.2.2"
   },
   "peerDependencies": {
     "playwright-extra": "*",

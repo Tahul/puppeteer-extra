@@ -1,6 +1,6 @@
 import debug, { Debugger } from 'debug'
 import * as Puppeteer from './puppeteer'
-import { defu } from 'defu'
+import merge from 'deepmerge'
 
 export interface PluginOptions {
   [key: string]: any
@@ -72,7 +72,7 @@ export abstract class PuppeteerExtraPlugin {
     this._debugBase = debug(`puppeteer-extra-plugin:base:${this.name}`)
     this._childClassMembers = []
 
-    this._opts = defu(opts || {}, this.defaults)
+    this._opts = merge(this.defaults, opts || {})
 
     this._debugBase('Initialized.')
   }
